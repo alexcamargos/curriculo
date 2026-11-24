@@ -3,20 +3,19 @@
     src: url("fonts/innovative-resume.eot?80kdh8");
     src: url("fonts/innovative-resume.eot?80kdh8#iefix")
             format("embedded-opentype"),
-        url("fonts/innovative-resume.ttf?80kdh8") format("truetype"),
         url("fonts/innovative-resume.woff?80kdh8") format("woff"),
+        url("fonts/innovative-resume.ttf?80kdh8") format("truetype"),
         url("fonts/innovative-resume.svg?80kdh8#innovative-resume")
             format("svg");
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display: swap;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+i[class^="icon-"],
+i[class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "innovative-resume" !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;

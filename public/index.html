@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Currículo formal de Alexsander Lopes Camargos — Cientista de Dados Sênior, Engenharia de Dados e Business Intelligence. Atuação no setor financeiro cooperativo (Sicoob), Python, SQL, Polars, DuckDB, dbt, Power BI, Machine Learning e formação pela USP/ESALQ."
+    />
+    <meta name="author" content="Alexsander Lopes Camargos" />
+    <meta name="theme-color" content="#0F172A" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:title"
+      content="Alexsander Lopes Camargos | Cientista de Dados Sênior · Engenharia de Dados &amp; BI"
+    />
+    <meta
+      property="og:description"
+      content="Cientista de Dados Sênior | Engenharia de Dados | Business Intelligence | Python, SQL, ETL/ELT, DuckDB, dbt, Power BI e Machine Learning."
+    />
+    <link rel="canonical" href="https://alcamargos.com/curriculo/" />
+    <meta property="og:url" content="https://alcamargos.com/curriculo/" />
+    <meta property="og:image" content="https://alcamargos.com/favicon.jpg" />
+
+    <title>Alexsander Lopes Camargos | Cientista de Dados Sênior</title>
+
+    <!-- Favicon (same icon as alcamargos.com) -->
+    <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+    <link rel="apple-touch-icon" href="favicon.jpg" />
+
+    <!-- Google Fonts: Inter + JetBrains Mono (same typography as alcamargos.com) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent light-to-dark flash before first paint -->
+    <script>
+      (() => {
+        try {
+          const rawParam = new URLSearchParams(window.location.search).get("theme");
+          const queryTheme = rawParam ? rawParam.trim().toLowerCase() : null;
+          const validQuery = queryTheme === "dark" || queryTheme === "light" ? queryTheme : null;
+          const saved = window.localStorage.getItem("theme");
+          const validSaved = saved === "dark" || saved === "light" ? saved : null;
+          const prefersDark =
+            window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+          const theme = validQuery || validSaved || (prefersDark ? "dark" : "light");
+          const isDark = theme === "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+          document.documentElement.classList.toggle("dark", isDark);
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute("content", isDark ? "#020617" : "#0F172A");
+        } catch {
+          // Keep default light theme when storage or matchMedia is unavailable
+        }
+      })();
+    </script>
+
+    <!-- Existing Personal Icon Pack -->
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+
+    <!-- Main & A4 Print Stylesheet -->
+    <link rel="stylesheet" href="assets/stylesheet/main.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alexsander Lopes Camargos",
+        "jobTitle": "Cientista de Dados Sênior | Engenharia de Dados | Business Intelligence",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sicoob Credijequitinhonha"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Capelinha",
+          "addressRegion": "MG",
+          "addressCountry": "BR"
+        },
+        "email": "mailto:alexcamargos@gmail.com",
+        "telephone": "+5533999533512",
+        "url": "https://alcamargos.com/",
+        "sameAs": [
+          "https://www.linkedin.com/in/alexcamargos",
+          "https://github.com/alexcamargos"
+        ]
+      }
+    </script>
+  </head>
+
+  <body id="topo">
+    <a class="skip-link" href="#conteudo-principal" data-i18n="ui.skipLink">
+      Ir para o conteúdo principal
+    </a>
+
+    <!-- Sticky Header (matching alexcamargos.github.io header UI/UX) -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a
+          class="brand"
+          href="#topo"
+          aria-label="Alexsander L. Camargos, início"
+          data-i18n-aria-label="aria.brand"
+        >
+          <span class="brand__badge" aria-hidden="true">
+            <svg
+              class="brand__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </span>
+          <span class="brand__name">Alexsander L. Camargos</span>
+        </a>
+
+        <nav
+          class="topbar__nav"
+          aria-label="Navegação das seções do currículo"
+          data-i18n-aria-label="aria.nav"
+        >
+          <a
+            class="nav-link is-active"
+            href="#resumo"
+            aria-current="location"
+            data-i18n="nav.summary"
+          >
+            Resumo
+          </a>
+          <a class="nav-link" href="#experiencia" data-i18n="nav.experience">Experiência</a>
+          <a class="nav-link" href="#projetos" data-i18n="nav.projects">Projetos</a>
+          <a class="nav-link" href="#competencias" data-i18n="nav.skills">Competências</a>
+          <a class="nav-link" href="#formacao" data-i18n="nav.education">Formação</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Idioma do currículo"
+            data-i18n-aria-label="aria.langSwitch"
+          >
+            <button
+              type="button"
+              class="lang-switch__btn"
+              data-lang-option="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              class="lang-switch__btn is-active"
+              data-lang-option="pt"
+              aria-pressed="true"
+            >
+              PT
+            </button>
+          </div>
+
+          <button
+            type="button"
+            id="theme-toggle"
+            class="tool-btn"
+            aria-label="Alternar tema claro e escuro"
+            title="Alternar tema"
+            data-i18n-aria-label="aria.themeToggle"
+            data-i18n-title="title.themeToggle"
+          >
+            <!-- Sun Icon (shown in dark mode) -->
+            <svg
+              class="svg-icon svg-icon--sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
+            </svg>
+            <!-- Moon Icon (shown in light mode) -->
+            <svg
+              class="svg-icon svg-icon--moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              ></path>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            id="print-btn"
+            class="tool-btn"
+            aria-label="Imprimir ou salvar versão em PDF"
+            title="Imprimir / Salvar PDF"
+            data-i18n-aria-label="aria.printBtn"
+            data-i18n-title="title.printBtn"
+          >
+            <i class="icon-printer" aria-hidden="true"></i>
+          </button>
+
+          <a
+            id="download-pdf-btn"
+            class="btn-primary"
+            href="assets/pdf/Alexsander-Lopes-Camargos-Curriculo-PT.pdf"
+            download="Alexsander-Lopes-Camargos-Curriculo-PT.pdf"
+          >
+            <svg
+              class="svg-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span data-i18n="ui.downloadPdf">Baixar PDF</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Resume Dossier -->
+    <div class="page-frame">
+      <div class="resume-sheet">
+        <main id="conteudo-principal" tabindex="-1">
+          <!-- Masthead / Hero Identity -->
+          <section class="masthead" aria-labelledby="candidate-name">
+          <div class="masthead__glow" aria-hidden="true"></div>
+
+          <div class="masthead__top">
+            <span class="eyebrow">
+              <span class="eyebrow__dot" aria-hidden="true"></span>
+              <span data-i18n="masthead.eyebrow">
+                Currículo Formal · Ciência de Dados, Engenharia de Dados &amp; BI
+              </span>
+            </span>
+            <span class="masthead__location">
+              <i class="icon-map-pin" aria-hidden="true"></i>
+              <span data-i18n="masthead.location">
+                Capelinha, MG · Disponível para trabalho remoto
+              </span>
+            </span>
+          </div>
+
+          <h1 id="candidate-name" class="masthead__name">Alexsander Lopes Camargos</h1>
+
+          <p class="masthead__headline" data-i18n="masthead.headline">
+            Cientista de Dados Sênior | Engenharia de Dados | Business Intelligence
+          </p>
+
+          <!-- Contact Strip (single-line in print, interactive pills on screen) -->
+          <ul
+            class="contact-strip"
+            aria-label="Informações de contato e perfis"
+            data-i18n-aria-label="aria.contactStrip"
+          >
+            <li class="contact-item contact-item--print-only">
+              <span class="contact-link" data-i18n="masthead.location">
+                Capelinha, MG · Disponível para trabalho remoto
+              </span>
+            </li>
+
+            <li class="contact-item">
+              <a class="contact-link" href="mailto:alexcamargos@gmail.com">
+                <i class="icon-mail" aria-hidden="true"></i>
+                <span>alexcamargos@gmail.com</span>
+              </a>
+              <button
+                type="button"
+                class="copy-btn"
+                data-copy="alexcamargos@gmail.com"
+                data-copy-label-pt="E-mail copiado"
+                data-copy-label-en="Email copied"
+                aria-label="Copiar e-mail"
+                title="Copiar e-mail"
+                data-i18n-aria-label="aria.copyEmail"
+                data-i18n-title="title.copyEmail"
+              >
+                <svg
+                  class="svg-icon svg-icon--xs"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+              </button>
+            </li>
+
+            <li class="contact-item">
+              <a class="contact-link" href="tel:+5533999533512">
+                <i class="icon-smartphone" aria-hidden="true"></i>
+                <span class="mono-num">+55 (33) 99953-3512</span>
+              </a>
+              <button
+                type="button"
+                class="copy-btn"
+                data-copy="+5533999533512"
+                data-copy-label-pt="Telefone copiado"
+                data-copy-label-en="Phone copied"
+                aria-label="Copiar telefone"
+                title="Copiar telefone"
+                data-i18n-aria-label="aria.copyPhone"
+                data-i18n-title="title.copyPhone"
+              >
+                <svg
+                  class="svg-icon svg-icon--xs"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+                  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path>
+                </svg>
+              </button>
+            </li>
+
+            <li class="contact-item">
+              <a
+                class="contact-link"
+                href="https://www.linkedin.com/in/alexcamargos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="icon-linkedin" aria-hidden="true"></i>
+                <span>linkedin.com/in/alexcamargos</span>
+              </a>
+            </li>
+
+            <li class="contact-item">
+              <a
+                class="contact-link"
+                href="https://alcamargos.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="icon-target" aria-hidden="true"></i>
+                <span>alcamargos.com</span>
+              </a>
+            </li>
+
+            <li class="contact-item">
+              <a
+                class="contact-link"
+                href="https://github.com/alexcamargos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="icon-github" aria-hidden="true"></i>
+                <span>github.com/alexcamargos</span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Business Impact Strip (web executive highlights; hidden in PDF to avoid repetition) -->
+          <div
+            class="impact-strip"
+            role="group"
+            aria-label="Principais resultados mensuráveis"
+            data-i18n-aria-label="aria.impactStrip"
+          >
+            <a class="impact-tile" href="#role-sicoob-bi">
+              <span class="impact-tile__eyebrow" data-i18n="kpi.eyebrow">Impacto de Negócio</span>
+              <div class="impact-tile__metric">
+                <span class="impact-tile__value">+10%</span>
+                <span class="impact-tile__label" data-i18n="kpi.acquisitionLabel">
+                  Aquisição de clientes
+                </span>
+              </div>
+              <span class="impact-tile__desc" data-i18n="kpi.acquisitionDesc">
+                Segmentação de clientes criada do zero para campanhas direcionadas
+              </span>
+            </a>
+
+            <a class="impact-tile" href="#role-sicoob-risk">
+              <span class="impact-tile__eyebrow" data-i18n="kpi.eyebrow">Impacto de Negócio</span>
+              <div class="impact-tile__metric">
+                <span class="impact-tile__value">-90%</span>
+                <span class="impact-tile__label" data-i18n="kpi.automationLabel">
+                  Tempo em relatórios críticos
+                </span>
+              </div>
+              <span class="impact-tile__desc" data-i18n="kpi.automationDesc">
+                Automação do monitoramento de cheques com Power Query e Excel
+              </span>
+            </a>
+
+            <a class="impact-tile" href="#projetos">
+              <span class="impact-tile__eyebrow" data-i18n="kpi.openSourceEyebrow">
+                Engenharia &amp; Open Source
+              </span>
+              <div class="impact-tile__metric">
+                <span class="impact-tile__value" data-i18n="kpi.projectsValue">PyPI · 499k</span>
+                <span class="impact-tile__label" data-i18n="kpi.projectsLabel">
+                  Escala &amp; pacotes públicos
+                </span>
+              </div>
+              <span class="impact-tile__desc" data-i18n="kpi.projectsDesc">
+                Modelos validados em 499 mil seções do TSE e pacotes financeiros publicados no PyPI
+              </span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Two-Column Web Grid (linearized in DOM order on @media print) -->
+        <div class="resume-grid">
+          <!-- Primary Column: Summary, Experience & Featured Projects -->
+          <div class="resume-main">
+            <!-- Section: Summary -->
+            <section class="section" id="resumo" aria-labelledby="heading-resumo">
+              <div class="section__header">
+                <div class="section__heading">
+                  <span class="section__bar" aria-hidden="true"></span>
+                  <h2 id="heading-resumo" class="section__title" data-i18n="sections.summary">
+                    Resumo Profissional
+                  </h2>
+                </div>
+              </div>
+
+              <div class="prose">
+                <p class="prose__lead" data-i18n="summary.p1">
+                  Profissional de dados em nível sênior com atuação ponta a ponta em Ciência de
+                  Dados, Engenharia de Dados e Business Intelligence no setor financeiro
+                  cooperativo.
+                </p>
+                <p data-i18n="summary.p2">
+                  Combino formação em Economia, Administração e Estatística Aplicada com engenharia
+                  reproduzível em Python, SQL, Polars, DuckDB, dbt e Power BI para entregar
+                  pipelines ETL/ELT, modelos preditivos (Scikit-learn, XGBoost, SHAP) e indicadores
+                  executivos para a diretoria. Trajetória consolidada em governança de dados (LGPD),
+                  gestão de riscos e controles internos, respaldada por portfólio auditável no
+                  GitHub, pacotes publicados no PyPI e MBA em Data Science e Analytics na USP/ESALQ.
+                </p>
+              </div>
+            </section>
+
+            <!-- Section: Experience -->
+            <section class="section" id="experiencia" aria-labelledby="heading-experiencia">
+              <div class="section__header">
+                <div class="section__heading">
+                  <span class="section__bar" aria-hidden="true"></span>
+                  <h2
+                    id="heading-experiencia"
+                    class="section__title"
+                    data-i18n="sections.experience"
+                  >
+                    Experiência Profissional
+                  </h2>
+                </div>
+              </div>
+
+              <div class="experience-list">
+                <!-- Organization 1: Sicoob Credijequitinhonha (2 progressive roles) -->
+                <article class="org-group">
+                  <div class="org-group__header">
+                    <div>
+                      <h3 class="org-group__name">Sicoob Credijequitinhonha</h3>
+                      <p class="org-group__meta">
+                        <span data-i18n="exp.sicoob.tenure">Desde 03/2023</span>
+                        <span aria-hidden="true">·</span>
+                        <span data-i18n="exp.locationCapelinha">Capelinha, MG</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="org-group__roles">
+                    <!-- Role 1.1: BI Analyst -->
+                    <article class="role-card" id="role-sicoob-bi">
+                      <div class="role-card__head">
+                        <div>
+                          <h4 class="role-card__title" data-i18n="exp.sicoobBi.title">
+                            Analista de Business Intelligence
+                          </h4>
+                          <p class="role-card__employer-print" data-i18n="exp.sicoob.employerPrint">
+                            Sicoob Credijequitinhonha · Capelinha, MG
+                          </p>
+                        </div>
+                        <div class="role-card__period">
+                          <span class="status-badge status-badge--current" data-i18n="ui.currentBadge">
+                            Atual
+                          </span>
+                          <span class="mono-num" data-i18n="exp.sicoobBi.period">
+                            03/2025 – Atual
+                          </span>
+                        </div>
+                      </div>
+
+                      <p class="role-card__summary" data-i18n="exp.sicoobBi.summary">
+                        Atuação junto às áreas de negócio e diretoria da cooperativa na estruturação
+                        de grandes volumes de dados, modelagem analítica e apoio a decisões
+                        comerciais e operacionais.
+                      </p>
+
+                      <ul class="achievement-list">
+                        <li data-i18n="exp.sicoobBi.b1">
+                          Estruturei do zero a segmentação de clientes da cooperativa, mapeando
+                          perfis para direcionar campanhas comerciais, elevar a qualificação de
+                          leads e gerar <strong>aumento de 10% na aquisição de novos
+                          clientes</strong>.
+                        </li>
+                        <li data-i18n="exp.sicoobBi.b2">
+                          Desenhei e implementei painel gerencial em Power BI para monitoramento
+                          orçamentário, consolidando visão única de alocação de recursos e desvios
+                          para a liderança executiva.
+                        </li>
+                        <li data-i18n="exp.sicoobBi.b3">
+                          Otimizei consultas SQL de relatórios críticos de negócio, eliminando
+                          gargalos de processamento e viabilizando o <strong>acompanhamento diário
+                          de indicadores-chave de desempenho (KPIs) pela diretoria</strong>.
+                        </li>
+                      </ul>
+
+                      <ul
+                        class="tag-list"
+                        aria-label="Competências aplicadas"
+                        data-i18n-aria-label="aria.appliedSkills"
+                      >
+                        <li class="tag">Power BI</li>
+                        <li class="tag">DAX</li>
+                        <li class="tag">Power Query</li>
+                        <li class="tag">SQL</li>
+                        <li class="tag">Python</li>
+                        <li class="tag">IBM Cognos Analytics</li>
+                        <li class="tag" data-i18n="tags.dataModeling">Modelagem de Dados</li>
+                        <li class="tag">KPIs</li>
+                      </ul>
+                    </article>
+
+                    <!-- Role 1.2: Risk & Controls Analyst -->
+                    <article class="role-card" id="role-sicoob-risk">
+                      <div class="role-card__head">
+                        <div>
+                          <h4 class="role-card__title" data-i18n="exp.sicoobRisk.title">
+                            Analista de Riscos e Controles
+                          </h4>
+                          <p class="role-card__employer-print" data-i18n="exp.sicoob.employerPrint">
+                            Sicoob Credijequitinhonha · Capelinha, MG
+                          </p>
+                        </div>
+                        <div class="role-card__period">
+                          <span class="mono-num" data-i18n="exp.sicoobRisk.period">
+                            03/2023 – 03/2025<span class="period-duration"> · 2 anos</span>
+                          </span>
+                        </div>
+                      </div>
+
+                      <p class="role-card__summary" data-i18n="exp.sicoobRisk.summary">
+                        Atuação transversal com auditoria, contabilidade e gestão de riscos para
+                        reforçar controles internos e substituir rotinas manuais por processos
+                        analíticos automatizados.
+                      </p>
+
+                      <ul class="achievement-list">
+                        <li data-i18n="exp.sicoobRisk.b1">
+                          Liderei a automação do monitoramento de compensação e devolução de
+                          cheques com Power Query e Excel, <strong>reduzindo em 90% o tempo de
+                          geração de relatórios críticos</strong> e liberando a equipe para
+                          análises estratégicas.
+                        </li>
+                        <li data-i18n="exp.sicoobRisk.b2">
+                          Desenvolvi rotina de monitoramento em tempo real para tesourarias dos
+                          pontos de atendimento, detectando discrepâncias de caixa de forma
+                          imediata e reforçando a prevenção a perdas e fraudes.
+                        </li>
+                        <li data-i18n="exp.sicoobRisk.b3">
+                          Elaborei relatórios técnicos de perdas operacionais e conformidade para
+                          subsidiar decisões da diretoria executiva e a continuidade dos negócios.
+                        </li>
+                      </ul>
+
+                      <ul
+                        class="tag-list"
+                        aria-label="Competências aplicadas"
+                        data-i18n-aria-label="aria.appliedSkills"
+                      >
+                        <li class="tag">Power Query</li>
+                        <li class="tag">Excel</li>
+                        <li class="tag" data-i18n="tags.auditAnalytics">Auditoria &amp; Riscos</li>
+                        <li class="tag" data-i18n="tags.internalControls">Controles Internos</li>
+                        <li class="tag" data-i18n="tags.fraudPrevention">Prevenção a Fraudes</li>
+                      </ul>
+                    </article>
+                  </div>
+                </article>
+
+                <!-- Organization 2: Cartório de Registro de Imóveis (consolidated, zero date overlap) -->
+                <article class="org-group">
+                  <div class="org-group__header">
+                    <div>
+                      <h3 class="org-group__name" data-i18n="exp.cartorio.org">
+                        Cartório de Registro de Imóveis de Capelinha
+                      </h3>
+                      <p class="org-group__meta">
+                        <span data-i18n="exp.cartorio.tenure">7 anos 2 meses</span>
+                        <span aria-hidden="true">·</span>
+                        <span data-i18n="exp.locationCapelinha">Capelinha, MG</span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="org-group__roles">
+                    <article class="role-card">
+                      <div class="role-card__head">
+                        <div>
+                          <h4 class="role-card__title" data-i18n="exp.cartorioCombined.title">
+                            Analista Administrativo Sênior &amp; Data Protection Officer (DPO)
+                          </h4>
+                          <p class="role-card__employer-print" data-i18n="exp.cartorio.employerPrint">
+                            Cartório de Registro de Imóveis de Capelinha · Capelinha, MG
+                          </p>
+                        </div>
+                        <div class="role-card__period">
+                          <span class="mono-num" data-i18n="exp.cartorioCombined.period">
+                            01/2016 – 03/2023<span class="period-duration"> · 7 anos 2 meses</span>
+                          </span>
+                        </div>
+                      </div>
+
+                      <p class="role-card__summary" data-i18n="exp.cartorioCombined.summary">
+                        Progressão da gestão de processos sob alto rigor legal à liderança formal
+                        como DPO (01/2022 – 03/2023), conduzindo conformidade regulatória e
+                        governança de informações sensíveis.
+                      </p>
+
+                      <ul class="achievement-list">
+                        <li data-i18n="exp.cartorioCombined.b1">
+                          Conduzi a adequação integral do cartório à Lei Geral de Proteção de Dados
+                          (LGPD), mapeando fluxos de dados, redefinindo procedimentos de
+                          armazenamento e tratamento e capacitando todas as equipes em segurança da
+                          informação.
+                        </li>
+                        <li data-i18n="exp.cartorioCombined.b2">
+                          Estruturei políticas de privacidade e gerenciei o ciclo de documentos
+                          imobiliários sob o Provimento n.º 50 do Conselho Nacional de Justiça
+                          (CNJ), elevando precisão, rastreabilidade e agilidade operacional.
+                        </li>
+                      </ul>
+
+                      <ul
+                        class="tag-list"
+                        aria-label="Competências aplicadas"
+                        data-i18n-aria-label="aria.appliedSkills"
+                      >
+                        <li class="tag" data-i18n="tags.dataGov">Governança de Dados</li>
+                        <li class="tag">LGPD</li>
+                        <li class="tag" data-i18n="tags.infoSec">Segurança da Informação</li>
+                        <li class="tag" data-i18n="tags.regCompliance">Conformidade Regulatória</li>
+                        <li class="tag" data-i18n="tags.processOpt">Otimização de Processos</li>
+                      </ul>
+                    </article>
+                  </div>
+                </article>
+
+                <!-- Compact Earlier Career Foundation (preserves 15+ yr lineage without diluting Senior focus) -->
+                <p class="earlier-note" data-i18n="exp.earlierNote">
+                  <strong>Trajetória anterior (2004–2015):</strong> Analista de Riscos e Processos
+                  Internos na Câmara Municipal de Angelândia (01/2013 – 12/2014), gestão financeira
+                  e de projetos no Sítio Córrego do Ipé (01/2004 – 11/2014) e Técnico em
+                  Processamento de Dados do CadÚnico na Prefeitura Municipal de Veredinha (06/2005 –
+                  12/2005).
+                </p>
+              </div>
+            </section>
+
+            <!-- Section: Featured Projects (5 GitHub Senior Proof Projects in Optimal Order) -->
+            <section class="section" id="projetos" aria-labelledby="heading-projetos">
+              <div class="section__header">
+                <div class="section__heading">
+                  <span class="section__bar" aria-hidden="true"></span>
+                  <h2 id="heading-projetos" class="section__title" data-i18n="sections.projects">
+                    Projetos em Destaque &amp; Open Source
+                  </h2>
+                </div>
+                <a
+                  class="section__more-link"
+                  href="https://github.com/alexcamargos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  github.com/alexcamargos<span class="ext-arrow" aria-hidden="true"> ↗</span>
+                </a>
+              </div>
+
+              <div class="projects-stack">
+                <!-- Project 1: Horizonte Eleitoral -->
+                <article class="project-card">
+                  <div class="project-card__head">
+                    <h3 class="project-card__title" data-i18n="projects.p1.title">
+                      Horizonte Eleitoral — Projeção Preditiva em Tempo Real (TSE)
+                    </h3>
+                    <div class="project-card__links">
+                      <a
+                        class="project-link project-link--accent"
+                        href="https://github.com/alexcamargos/horizonte_eleitoral"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/alexcamargos/horizonte_eleitoral<span
+                          class="ext-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                  <p class="project-card__desc" data-i18n="projects.p1.desc">
+                    Plataforma de projeção presidencial com Regressão Multinível com
+                    Pós-Estratificação (MRP), encolhimento bayesiano adaptativo e simulações de
+                    Monte Carlo validada em 499.206 seções reais do TSE (MAE de 0,06 p.p. com 2%
+                    apurado), carga colunar em menos de 0,8s e 183 testes automatizados.
+                  </p>
+                  <ul class="tag-list">
+                    <li class="tag tag--strong">Python</li>
+                    <li class="tag tag--strong">DuckDB</li>
+                    <li class="tag">PyArrow / Parquet</li>
+                    <li class="tag">SciPy</li>
+                    <li class="tag">NumPy</li>
+                    <li class="tag">FastAPI</li>
+                    <li class="tag">Streamlit</li>
+                    <li class="tag">Pydantic</li>
+                    <li class="tag">Pytest</li>
+                    <li class="tag">Mypy</li>
+                  </ul>
+                </article>
+
+                <!-- Project 2: TCC Credit Union EWS (PEARLS) -->
+                <article class="project-card">
+                  <div class="project-card__head">
+                    <h3 class="project-card__title" data-i18n="projects.p2.title">
+                      Predição de Insolvência em Cooperativas de Crédito (EWS · PEARLS)
+                    </h3>
+                    <div class="project-card__links">
+                      <a
+                        class="project-link project-link--accent"
+                        href="https://github.com/alexcamargos/tcc-credit-union-ews-pearls"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/alexcamargos/tcc-credit-union-ews-pearls<span
+                          class="ext-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                  <p class="project-card__desc" data-i18n="projects.p2.desc">
+                    Sistema de alerta precoce (TCC MBA USP/ESALQ) com pipeline reproduzível de
+                    Machine Learning supervisionado sobre dados públicos COSIF/IF.data do Banco
+                    Central (2000–2024), engenharia de variáveis PEARLS, validação temporal
+                    out-of-time e explicabilidade via SHAP (XAI).
+                  </p>
+                  <ul class="tag-list">
+                    <li class="tag tag--strong">Python</li>
+                    <li class="tag tag--strong">Scikit-learn</li>
+                    <li class="tag tag--strong">XGBoost</li>
+                    <li class="tag">Statsmodels</li>
+                    <li class="tag">SHAP</li>
+                    <li class="tag">Optuna</li>
+                    <li class="tag">Pandera</li>
+                    <li class="tag">Pydantic</li>
+                    <li class="tag">PyArrow</li>
+                  </ul>
+                </article>
+
+                <!-- Project 3: Bacen IF.data AutoScraper & Data Manager -->
+                <article class="project-card">
+                  <div class="project-card__head">
+                    <h3 class="project-card__title">Bacen IF.data AutoScraper &amp; Data Manager</h3>
+                    <div class="project-card__links">
+                      <a
+                        class="project-link project-link--accent"
+                        href="https://github.com/alexcamargos/bacen-ifdata-scraper"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/alexcamargos/bacen-ifdata-scraper<span
+                          class="ext-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗</span
+                        >
+                      </a>
+                      <a
+                        class="project-link"
+                        href="https://pypi.org/project/bacen-ifdata-scraper/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        PyPI<span class="ext-arrow" aria-hidden="true"> ↗</span>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="project-card__desc" data-i18n="projects.p3.desc">
+                    Pipeline ETL/ELT ponta a ponta (17 estrelas no GitHub, pacote publicado no PyPI)
+                    que automatiza extração, limpeza, validação de schema e carga dos relatórios
+                    trimestrais do Portal IF.data (Banco Central) em banco OLAP DuckDB e modelos
+                    dimensionais Star Schema em dbt prontos para BI.
+                  </p>
+                  <ul class="tag-list">
+                    <li class="tag tag--strong">Python</li>
+                    <li class="tag tag--strong">Polars</li>
+                    <li class="tag tag--strong">DuckDB</li>
+                    <li class="tag tag--strong">dbt</li>
+                    <li class="tag">Selenium</li>
+                    <li class="tag">Pandera</li>
+                    <li class="tag">Pydantic</li>
+                    <li class="tag">PyPI</li>
+                  </ul>
+                </article>
+
+                <!-- Project 4: Margem Eleitoral -->
+                <article class="project-card">
+                  <div class="project-card__head">
+                    <h3 class="project-card__title" data-i18n="projects.p4.title">
+                      Margem Eleitoral — Auditoria Estatística de Pesquisas (TSE)
+                    </h3>
+                    <div class="project-card__links">
+                      <a
+                        class="project-link project-link--accent"
+                        href="https://github.com/alexcamargos/margem_eleitoral"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/alexcamargos/margem_eleitoral<span
+                          class="ext-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗</span
+                        >
+                      </a>
+                      <a
+                        class="project-link"
+                        href="https://margemeleitoral.streamlit.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        App<span class="ext-arrow" aria-hidden="true"> ↗</span>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="project-card__desc" data-i18n="projects.p4.desc">
+                    Aplicação interativa em produção para Data Storytelling e auditoria estatística
+                    de pesquisas eleitorais do TSE, combinando agregador dinâmico com decaimento
+                    exponencial, decomposição de Total Survey Error e análise de viés direcional de
+                    institutos (house effects).
+                  </p>
+                  <ul class="tag-list">
+                    <li class="tag tag--strong">Python</li>
+                    <li class="tag">Polars</li>
+                    <li class="tag">Statsmodels</li>
+                    <li class="tag">SciPy</li>
+                    <li class="tag">Plotly</li>
+                    <li class="tag">Streamlit</li>
+                    <li class="tag">Pydantic</li>
+                    <li class="tag">Pytest</li>
+                  </ul>
+                </article>
+
+                <!-- Project 5: Python Fundamentus (pyFundamentus) -->
+                <article class="project-card">
+                  <div class="project-card__head">
+                    <h3 class="project-card__title">Python Fundamentus (pyFundamentus)</h3>
+                    <div class="project-card__links">
+                      <a
+                        class="project-link project-link--accent"
+                        href="https://github.com/alexcamargos/pyFundamentus"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        github.com/alexcamargos/pyFundamentus<span
+                          class="ext-arrow"
+                          aria-hidden="true"
+                        >
+                          ↗</span
+                        >
+                      </a>
+                      <a
+                        class="project-link"
+                        href="https://pypi.org/project/pyfundamentus/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        PyPI<span class="ext-arrow" aria-hidden="true"> ↗</span>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="project-card__desc" data-i18n="projects.p5.desc">
+                    Biblioteca open source em Python (16 estrelas, 5 forks, publicada no PyPI) que
+                    extrai e estrutura indicadores fundamentalistas, múltiplos de valuation e
+                    demonstrativos financeiros de empresas listadas na B3 com cache de requisições
+                    e suíte de testes automatizados.
+                  </p>
+                  <ul class="tag-list">
+                    <li class="tag tag--strong">Python</li>
+                    <li class="tag">Requests</li>
+                    <li class="tag">BeautifulSoup</li>
+                    <li class="tag">Web Scraping</li>
+                    <li class="tag">Pytest</li>
+                    <li class="tag">PyPI</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <!-- Secondary Column (Sidebar on web; linearized after Projects on print) -->
+          <aside
+            class="resume-sidebar"
+            aria-label="Competências técnicas e acesso rápido"
+            data-i18n-aria-label="aria.sidebar"
+          >
+            <div class="resume-sidebar__sticky">
+              <!-- Section: Core Skills -->
+              <section class="sidebar-block" id="competencias" aria-labelledby="heading-competencias">
+                <div class="section__header section__header--compact">
+                  <div class="section__heading">
+                    <span class="section__bar section__bar--sm" aria-hidden="true"></span>
+                    <h2
+                      id="heading-competencias"
+                      class="section__title section__title--sm"
+                      data-i18n="sections.skills"
+                    >
+                      Principais Competências
+                    </h2>
+                  </div>
+                </div>
+
+                <div class="skill-groups">
+                  <div class="skill-group skill-group--emerald">
+                    <h3 class="skill-group__title">
+                      <span class="skill-group__dot" aria-hidden="true"></span>
+                      <span data-i18n="skills.dsTitle">Ciência de Dados &amp; Machine Learning</span>
+                    </h3>
+                    <ul class="tag-list">
+                      <li class="tag tag--strong">Python</li>
+                      <li class="tag tag--strong">Scikit-learn</li>
+                      <li class="tag tag--strong">XGBoost</li>
+                      <li class="tag">Statsmodels</li>
+                      <li class="tag">SciPy</li>
+                      <li class="tag">NumPy</li>
+                      <li class="tag">SHAP (XAI)</li>
+                      <li class="tag">Optuna</li>
+                      <li class="tag" data-i18n="skills.timeSeries">Séries Temporais</li>
+                      <li class="tag" data-i18n="skills.bayesian">Modelagem Bayesiana (MRP)</li>
+                      <li class="tag" data-i18n="skills.monteCarlo">Simulação de Monte Carlo</li>
+                      <li class="tag" data-i18n="skills.validation">Validação Temporal &amp; AUC-ROC</li>
+                    </ul>
+                  </div>
+
+                  <div class="skill-group skill-group--sky">
+                    <h3 class="skill-group__title">
+                      <span class="skill-group__dot" aria-hidden="true"></span>
+                      <span data-i18n="skills.engTitle">Engenharia de Dados &amp; Arquitetura</span>
+                    </h3>
+                    <ul class="tag-list">
+                      <li class="tag tag--strong">SQL</li>
+                      <li class="tag tag--strong">ETL / ELT</li>
+                      <li class="tag tag--strong">Polars</li>
+                      <li class="tag tag--strong">DuckDB</li>
+                      <li class="tag tag--strong">dbt</li>
+                      <li class="tag">Pandas</li>
+                      <li class="tag">PyArrow / Parquet</li>
+                      <li class="tag" data-i18n="skills.starSchema">Modelagem Dimensional (Star Schema)</li>
+                      <li class="tag">Pydantic</li>
+                      <li class="tag">Pandera</li>
+                      <li class="tag">FastAPI</li>
+                      <li class="tag">Selenium</li>
+                      <li class="tag">Git / GitHub</li>
+                    </ul>
+                  </div>
+
+                  <div class="skill-group skill-group--amber">
+                    <h3 class="skill-group__title">
+                      <span class="skill-group__dot" aria-hidden="true"></span>
+                      <span data-i18n="skills.biTitle">Business Intelligence &amp; Visualização</span>
+                    </h3>
+                    <ul class="tag-list">
+                      <li class="tag tag--strong">Power BI</li>
+                      <li class="tag tag--strong">DAX</li>
+                      <li class="tag">Power Query (M)</li>
+                      <li class="tag">Excel</li>
+                      <li class="tag">IBM Cognos Analytics</li>
+                      <li class="tag">Tableau</li>
+                      <li class="tag">Streamlit</li>
+                      <li class="tag">Plotly</li>
+                      <li class="tag" data-i18n="skills.storytelling">Data Storytelling</li>
+                      <li class="tag" data-i18n="skills.kpis">KPIs Executivos</li>
+                    </ul>
+                  </div>
+
+                  <div class="skill-group skill-group--purple">
+                    <h3 class="skill-group__title">
+                      <span class="skill-group__dot" aria-hidden="true"></span>
+                      <span data-i18n="skills.govTitle">Qualidade, Governança &amp; Negócio</span>
+                    </h3>
+                    <ul class="tag-list">
+                      <li class="tag">Pytest</li>
+                      <li class="tag">Mypy</li>
+                      <li class="tag">GNU/Linux</li>
+                      <li class="tag" data-i18n="skills.lgpd">Governança de Dados (LGPD)</li>
+                      <li class="tag" data-i18n="skills.riskMgmt">Gestão de Riscos &amp; Controles</li>
+                      <li class="tag" data-i18n="skills.bacen">Regulação Financeira (BACEN / COSIF)</li>
+                      <li class="tag" data-i18n="skills.econ">Análise Econômico-Financeira</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Section: Offline PDF & Portfolio Bridge (screen-only) -->
+              <section class="sidebar-block sidebar-callout" aria-labelledby="heading-acesso">
+                <h2 id="heading-acesso" class="sidebar-callout__title" data-i18n="callout.title">
+                  Versão ATS (PDF) &amp; Portfólio
+                </h2>
+                <p class="sidebar-callout__text" data-i18n="callout.text">
+                  Baixe este currículo em PDF A4 (2 páginas, texto selecionável e estruturado para
+                  sistemas ATS) ou explore mais projetos e artigos no portfólio completo.
+                </p>
+                <div class="sidebar-callout__actions">
+                  <a
+                    id="sidebar-download-pdf"
+                    class="btn-primary btn-primary--block"
+                    href="assets/pdf/Alexsander-Lopes-Camargos-Curriculo-PT.pdf"
+                    download="Alexsander-Lopes-Camargos-Curriculo-PT.pdf"
+                  >
+                    <i class="icon-file-text" aria-hidden="true"></i>
+                    <span data-i18n="ui.downloadPdfA4">Baixar PDF (A4 · ATS)</span>
+                  </a>
+                  <a
+                    class="btn-ghost"
+                    href="https://alcamargos.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span data-i18n="callout.portfolioCta">Portfólio alcamargos.com</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Full-Width Education & Languages Band (canonical closing order in both Web & PDF) -->
+        <div class="education-band">
+          <section id="formacao" aria-labelledby="heading-formacao">
+            <div class="section__header">
+              <div class="section__heading">
+                <span class="section__bar" aria-hidden="true"></span>
+                <h2 id="heading-formacao" class="section__title" data-i18n="sections.education">
+                  Formação Acadêmica
+                </h2>
+              </div>
+            </div>
+
+            <ol class="education-list">
+              <li class="edu-item edu-item--highlight">
+                <div class="edu-item__main">
+                  <h3 class="edu-item__degree" data-i18n="edu.usp.degree">
+                    MBA em Data Science e Analytics
+                  </h3>
+                  <p class="edu-item__school" data-i18n="edu.usp.school">
+                    USP/ESALQ (Universidade de São Paulo)
+                  </p>
+                </div>
+                <div class="edu-item__period">
+                  <span class="status-badge status-badge--amber" data-i18n="ui.inProgressBadge">
+                    Em andamento
+                  </span>
+                  <span class="edu-pill mono-num" data-i18n="edu.usp.period">
+                    05/2025 – 03/2027
+                  </span>
+                </div>
+              </li>
+
+              <li class="edu-item">
+                <div class="edu-item__main">
+                  <h3 class="edu-item__degree" data-i18n="edu.stat.degree">
+                    Pós-Graduação Lato Sensu em Estatística Aplicada
+                  </h3>
+                  <p class="edu-item__school" data-i18n="edu.stat.school">
+                    Anhanguera Educacional
+                  </p>
+                </div>
+                <div class="edu-item__period">
+                  <span class="edu-pill mono-num" data-i18n="edu.stat.period">
+                    04/2024 – 01/2025
+                  </span>
+                </div>
+              </li>
+
+              <li class="edu-item">
+                <div class="edu-item__main">
+                  <h3 class="edu-item__degree" data-i18n="edu.bi.degree">
+                    MBA em Business Intelligence
+                  </h3>
+                  <p class="edu-item__school" data-i18n="edu.bi.school">
+                    Anhanguera Educacional
+                  </p>
+                </div>
+                <div class="edu-item__period">
+                  <span class="edu-pill mono-num" data-i18n="edu.bi.period">
+                    03/2024 – 12/2024
+                  </span>
+                </div>
+              </li>
+
+              <li class="edu-item">
+                <div class="edu-item__main">
+                  <h3 class="edu-item__degree" data-i18n="edu.econ.degree">
+                    Bacharelado em Ciências Econômicas
+                  </h3>
+                  <p class="edu-item__school" data-i18n="edu.econ.school">UniCesumar</p>
+                </div>
+                <div class="edu-item__period">
+                  <span class="edu-pill mono-num" data-i18n="edu.econ.period">
+                    02/2022 – 12/2024
+                  </span>
+                </div>
+              </li>
+
+              <li class="edu-item">
+                <div class="edu-item__main">
+                  <h3 class="edu-item__degree" data-i18n="edu.adm.degree">
+                    Bacharelado em Administração
+                  </h3>
+                  <p class="edu-item__school" data-i18n="edu.adm.school">
+                    UNINTER Centro Universitário Internacional
+                  </p>
+                </div>
+                <div class="edu-item__period">
+                  <span class="edu-pill mono-num" data-i18n="edu.adm.period">2012 – 2016</span>
+                </div>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Languages Sub-Band -->
+          <section class="languages-band" id="idiomas" aria-labelledby="heading-idiomas">
+            <div class="section__header section__header--compact">
+              <div class="section__heading">
+                <span class="section__bar section__bar--sm" aria-hidden="true"></span>
+                <h2
+                  id="heading-idiomas"
+                  class="section__title section__title--sm"
+                  data-i18n="sections.languages"
+                >
+                  Idiomas
+                </h2>
+              </div>
+            </div>
+
+            <dl class="lang-list">
+              <div class="lang-row">
+                <dt data-i18n="langs.ptName">Português</dt>
+                <dd data-i18n="langs.ptLevel">Nativo</dd>
+              </div>
+              <div class="lang-row">
+                <dt data-i18n="langs.enName">Inglês</dt>
+                <dd>
+                  <a
+                    class="lang-cert-link"
+                    href="https://www.efset.org/cert/qqChFR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-i18n="langs.enLevel"
+                  >
+                    Intermediário-Avançado (B2 · EF SET)<span class="ext-arrow" aria-hidden="true">
+                      ↗</span
+                    >
+                  </a>
+                </dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+        </main>
+
+        <!-- Footer (aligned with alexcamargos.github.io footer.html) -->
+        <footer class="resume-footer">
+          <div class="resume-footer__meta">
+            <span>&copy; 2021–2026</span>
+            <span aria-hidden="true">|</span>
+            <span>MIT License</span>
+            <span aria-hidden="true">·</span>
+            <span data-i18n="footer.note">
+              Currículo Web &amp; PDF ATS sincronizados · alcamargos.com
+            </span>
+          </div>
+
+          <nav
+            class="resume-footer__links"
+            aria-label="Links sociais"
+            data-i18n-aria-label="aria.socialLinks"
+          >
+            <a
+              class="footer-social footer-social--github"
+              href="https://github.com/alexcamargos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="icon-github" aria-hidden="true"></i>
+            </a>
+            <a
+              class="footer-social footer-social--linkedin"
+              href="https://www.linkedin.com/in/alexcamargos"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="icon-linkedin" aria-hidden="true"></i>
+            </a>
+            <a
+              class="footer-social footer-social--email"
+              href="mailto:alexcamargos@gmail.com"
+              aria-label="Email"
+            >
+              <i class="icon-mail" aria-hidden="true"></i>
+            </a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Floating Back-to-Top Button (hidden on print) -->
+    <button
+      type="button"
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Voltar ao topo"
+      title="Voltar ao topo"
+      data-i18n-aria-label="aria.backToTop"
+      data-i18n-title="title.backToTop"
+    >
+      <i class="icon-chevrons-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Accessible Copy Feedback Toast -->
+    <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="assets/javascript/my_scripts.js"></script>
+  </body>
+</html>

@@ -5,7 +5,7 @@ Currículo web interativo desenvolvido para apresentação a recrutadores, com d
 ## Visualização
 
 - **Versão online (principal — GitHub Pages):** [alcamargos.com/curriculo](https://alcamargos.com/curriculo/)
-- **Espelho (Netlify):** [alcamargos-resume.netlify.app](https://alcamargos-resume.netlify.app)
+- **Espelho (Netlify):** [alex-curriculo.netlify.app](https://alex-curriculo.netlify.app/)
 - **Portfólio:** [alcamargos.com](https://alcamargos.com/)
 - **LinkedIn:** [linkedin.com/in/alexcamargos](https://www.linkedin.com/in/alexcamargos/)
 
